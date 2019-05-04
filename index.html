@@ -23,6 +23,7 @@
         run: function(e) {
           var e = e || window.event;
           var rel_pos = e.clientX / document.documentElement.clientWidth;
+          console.log(e)
           if (e.clientY > 300 && rel_pos > 0.9) {
             s.setAttribute('src',"media/WillFarRight.jpg");
             } else if (e.clientY > 300 && rel_pos > 0.7) {
