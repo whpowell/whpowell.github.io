@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="temp-style.css" type="text/css" rel="stylesheet">
+    <title>My home page</title>
+  </head>
+  <body>
+    <img class="top" src="media/twitter.svg" alt="twitter">
+    <div class="divider" id="below-port">
+    </div>
+    <nav id="menu" class="mobile-hide">
+      <ul>
+        <li>
+          <a href="./index.html" class="menu">Home</a>
+        </li>
+        <li>
+          <a href="./youtube.html">Youtube</a>
+        </li>
+        <li>
+          <a href="./websites.html">Websites</a>
+        </li>
+        <li>
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="./coding.html">Coding</a>
+        </li>
+        <li>
+          <a href="./twitter.html">Twitter</a>
+        </li>
+        <li>
+          <a href="./publications.html">Publications</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" onclick="closeNav()"><img id="closebtn" src="media/rarrow.svg"></a>
+      <a href="./index.html">Home</a>
+      <a href="./youtube.html">Youtube</a>
+      <a href="./websites.html">Websites</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./coding.html">Coding</a>
+      <a href="./twitter.html">Twitter</a>
+      <a href="./publications.html">Publications</a>
+    </div>
+
+    <img id="openbtn" class="monitor-hide" onclick="openNav()" src="media/larrow.svg">
+
+    <script type="text/javascript">
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
+
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+    </script>
+
+    <div id="content" class="content">
+      <a class="twitter-timeline" href="https://twitter.com/STEMcellYoutube?ref_src=twsrc%5Etfw">Tweets by STEMcellYoutube</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+
+    var resizeMenu = (function() {
+      var m = document.getElementById('menu');
+      var c = document.getElementById('content');
+
+      return {
+        init: function() {
+          console.log(`width: ${Math.ceil(document.documentElement.clientWidth/3)};px;`)
+          m.setAttribute('style',`width: ${Math.ceil(document.documentElement.clientWidth/4)};px;`)
+          c.setAttribute('style',`margin-right: ${Math.ceil(Math.max(document.documentElement.clientWidth/2-400,20+document.documentElement.clientWidth/4))};px;`)
+          },
+
+        run: function() {
+          console.log(`width: ${Math.ceil(document.documentElement.clientWidth/3)};px;`)
+          m.setAttribute('style',`width: ${Math.ceil(document.documentElement.clientWidth/4)};px;`)
+          c.setAttribute('style',`margin-right: ${Math.ceil(Math.max(document.documentElement.clientWidth/2-400,20+document.documentElement.clientWidth/4))};px;`)
+          }
+        };
+      }());
+
+    window.onload = function() {
+      resizeMenu.init();
+      document.body.onresize = resizeMenu.run;
+      }
+
+  </script>
+
+</html>

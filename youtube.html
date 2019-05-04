@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="temp-style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.typekit.net/mfm2miw.css"/>
+    <title>My home page</title>
+  </head>
+  <body>
+    <img class="top" src="media/youtube.svg" alt="twitter"/>
+    <div class="divider" id="below-port">
+    </div>
+    <nav id="menu" class="mobile-hide">
+      <ul>
+        <li>
+          <a href="./index.html" class="menu">Home</a>
+        </li>
+        <li>
+          <a href="./youtube.html">Youtube</a>
+        </li>
+        <li>
+          <a href="./websites.html">Websites</a>
+        </li>
+        <li>
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="./coding.html">Coding</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/STEMcellYoutube">Twitter</a>
+        </li>
+        <li>
+          <a href="./publications.html">Publications</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" onclick="closeNav()"><img id="closebtn" src="media/rarrow.svg"/></a>
+      <a href="./index.html">Home</a>
+      <a href="./youtube.html">Youtube</a>
+      <a href="./websites.html">Websites</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./coding.html">Coding</a>
+      <a href="https://twitter.com/STEMcellYoutube">Twitter</a>
+      <a href="./publications.html">Publications</a>
+    </div>
+
+    <img id="openbtn" class="monitor-hide" onclick="openNav()" src="media/larrow.svg"/>
+
+    <script type="text/javascript">
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
+
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+    </script>
+
+    <div id="content" class="grid content">
+      <div>
+        <a href="https://www.youtube.com/watch?v=CaClUZDdZtA">
+          <img style="max-width: 90%;" src="media/sandcastle.gif"/>
+        </a>
+        <p>Everyone knows that if you want to build a sandcastle you have to use wet sand. Wet sand sticks together and dry sand doesn't. But what makes wet sand so sticky?</p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=PwIDFSC1KzI">
+          <img style="max-width: 90%;" src="media/brouwer.gif"/>
+        </a>
+        <p>Brouwer's theorem: or why you can't stir a cup of tea. This fundamental theorem of topology, has some unusual consequences.</p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=7kVK9wr8ThE">
+          <img style="max-width: 90%;" src="media/stonehenge.gif"/>
+        </a>
+        <p>What is the circumference of Stonehenge and how big are stones? We can easily measure them today but how did the Stone Age Britons do it?</p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=iB_uL2ffGiU">
+          <img style="max-width: 90%;" src="media/blackhole.gif"/>
+        </a>
+        <p>What happens when someone falls into a black hole? The answer can be tricky to understand. But if you know what a space-time diagram is there's a quick and dirty method to finding stuff out for yourself.</p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=1FE0Z4lov7Y">
+          <img style="max-width: 90%;" src="media/electromag.gif"/>
+        </a>
+        <p>Have you ever wondered why the electric and magnetic fields are so closely connected? The unbelievable answer lies in special relativity. What looks like a magnetic field in a stationary frame of reference transforms into an electrostatic field in a moving frame of reference.</p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/watch?v=1jBaWhTBwxM">
+          <img style="max-width: 90%;" src="media/function.gif"/>
+        </a>
+        <p>This video explains what a mathematical function is and how it defines a relationship between two sets, the domain and the range. It also introduces three important categories of function: injective, surjective and bijective.</p>
+      </div>
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+
+    var resizeMenu = (function() {
+      var m = document.getElementById('menu');
+      var c = document.getElementById('content');
+
+      return {
+        init: function() {
+          m.setAttribute('style',`width: ${Math.ceil(document.documentElement.clientWidth/4)};px;`)
+          c.setAttribute('style',`margin-right: ${Math.ceil(Math.max(document.documentElement.clientWidth/2-400,20+document.documentElement.clientWidth/4))};px;`)
+          },
+
+        run: function() {
+          m.setAttribute('style',`width: ${Math.ceil(document.documentElement.clientWidth/4)};px;`)
+          c.setAttribute('style',`margin-right: ${Math.ceil(Math.max(document.documentElement.clientWidth/2-400,20+document.documentElement.clientWidth/4))};px;`)
+          }
+        };
+      }());
+
+    window.onload = function() {
+      resizeMenu.init();
+      document.body.onresize = resizeMenu.run;
+      }
+
+  </script>
+
+</html>

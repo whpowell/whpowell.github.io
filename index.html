@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home-style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mfm2miw.css">
+    <title>My home page</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var followCursor = (function() {
+        var s = document.createElement('img');
+        s.className = "top mobile-hide";
+
+        return {
+          init: function() {
+            var currentDiv = document.getElementById("below-port");
+            document.body.insertBefore(s, currentDiv);
+          },
+
+        run: function(e) {
+          var e = e || window.event;
+          var rel_pos = e.clientX / document.documentElement.clientWidth;
+          if (e.clientY > 300 && rel_pos > 0.9) {
+            s.setAttribute('src',"media/WillFarRight.jpg");
+            } else if (e.clientY > 300 && rel_pos > 0.7) {
+            s.setAttribute('src',"media/WillRight.jpg");
+            } else if (e.clientY > 300 && rel_pos > 0.3) {
+            s.setAttribute('src',"media/WillCenter.jpg");
+            } else if (e.clientY > 300 && rel_pos > 0.1) {
+            s.setAttribute('src',"media/WillLeft.jpg");
+            } else if (e.clientY > 300 && rel_pos > 0) {
+            s.setAttribute('src',"media/WillFarLeft.jpg");
+            } else {
+            s.setAttribute('src',"media/WillNeutral.jpg");
+            }
+          }
+        };
+      }());
+
+      window.onload = function() {
+        followCursor.init();
+        document.body.onmousemove = followCursor.run;
+        }
+
+    </script>
+
+    <img class="top monitor-hide" src="media/WillNeutral.jpg" alt="Will">
+    <div class="divider" id="below-port">
+    </div>
+    <div class="grid mobile-hide">
+      <div>
+        <a class="grid-link" href="./youtube.html">
+          <img class="icon" src="media/youtube.svg" alt="youtube">
+          <p class="text">Youtube</p>
+        </a>
+      </div>
+      <div>
+        <a class="grid-link" href="./websites.html">
+          <img class="icon" src="media/html.svg" alt="coding">
+          <p class="text">Websites</p>
+        </a>
+      </div>
+      <div>
+        <a class="grid-link" href="./blog.html">
+          <img class="icon" src="media/wordpress.svg" alt="blog">
+          <p class="text">Blog</p>
+        </a>
+      </div>
+      <div>
+        <a class="grid-link" href="./coding.html">
+          <img class="icon" src="media/github.svg" alt="coding">
+          <p class="text">Coding Projects</p>
+        </a>
+      </div>
+      <div>
+        <a class="grid-link" href="https://twitter.com/STEMcellYoutube">
+          <img class="icon" src="media/twitter.svg" alt="twitter">
+          <p class="text">Twitter</p>
+        </a>
+      </div>
+      <div>
+        <a class="grid-link" href=".publications.html">
+          <img class="icon" src="media/work-in-progree.svg" alt="coding">
+          <p class="text">Coming Soon</p>
+        </a>
+      </div>
+    </div>
+    <nav class="monitor-hide">
+      <ul>
+        <li>
+          <a href="./index.html" style="background-color: #FF6161;" class="menu">Home</a>
+        </li>
+        <li>
+          <a href="./youtube.html" style="background-color: #FFE048" class="menu">Youtube</a>
+        </li>
+        <li>
+          <a href="./websites.html" style="background-color: #59C0DE" class="menu">Websites</a>
+        </li>
+        <li>
+          <a href="./blog.html" style="background-color: #FFB9FC" class="menu">Blog</a>
+        </li>
+        <li>
+          <a href="./coding.html" style="background-color: #FFB869" class="menu">Coding</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/STEMcellYoutube" style="background-color: #9DDE6A" class="menu">Twitter</a>
+        </li>
+        <li>
+          <a href="./publications.html" style="background-color: #BE9ED5" class="menu">Publications</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

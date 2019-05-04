@@ -1,0 +1,85 @@
+@media only screen and (max-width: 500px) {
+   .mobile-hide{ display: none !important; }
+}
+
+@media only screen and (min-width: 500px) {
+   .monitor-hide{ display: none !important; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+body {
+  font-family: "gineso", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+a img {
+  width: 150px;
+}
+
+a p {
+  display: none;
+  width: 150px;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+a:hover p {
+  display: block;
+  position: absolute;
+  padding-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+.menu:hover {
+  background-color: #FFF !important;
+}
+
+.top {
+  display: block;
+  width: 200px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  border-bottom: 1px solid #000;
+  padding-bottom: 50px;
+}
+
+.grid {
+  display:grid;
+  max-width: 1000px;
+  min-width: 500px;
+  height: 500px;
+  grid-template: repeat(2,250px) / repeat(3,1fr);
+  margin: 50px auto 0 auto;
+}

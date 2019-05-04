@@ -1,0 +1,235 @@
+@media only screen and (max-width: 500px) {
+   .mobile-hide{ display: none !important; }
+}
+
+@media only screen and (max-width: 500px) {
+   .blog-preview{ width: 100% !important; }
+   .content{ width: 100% !important; }
+}
+
+@media only screen and (min-width: 500px) {
+   .monitor-hide{ display: none !important; }
+}
+
+@media only screen and (max-width: 1400px) {
+  li a { font-size: 14px !important; }
+}
+
+@media only screen and (max-width: 1000px) {
+  li a { font-size: 10px !important; }
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid { grid-template-columns: 1fr !important; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+body {
+  font-family: "gineso", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+nav {
+  padding-top: 50px;
+  right: 0;
+  position: fixed;
+  max-width: 400px !important;
+}
+
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+li {
+  width: calc(100% - 20px);
+  margin-left: auto;
+  transition: width 1s;
+  background-color: #FFF;
+}
+
+li a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  margin-top: -1px;
+}
+
+li:hover {
+  width: 100%;
+}
+
+li:nth-child(1):hover {
+  background-color: #FF6161;
+}
+
+li:nth-child(2):hover {
+  background-color: #FFE048;
+}
+
+li:nth-child(3):hover {
+  background-color: #59C0DE;
+}
+
+li:nth-child(4):hover {
+  background-color: #FFB9FC;
+}
+
+li:nth-child(5):hover {
+  background-color: #FFB869;
+}
+
+li:nth-child(6):hover {
+  background-color: #9DDE6A;
+}
+
+li:nth-child(7):hover {
+  background-color: #BE9ED5;
+}
+
+p {
+  padding: 20px;
+  font-size: 12pt;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.top {
+  display: block;
+  width: 150px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  border-bottom: 1px solid #000;
+  padding-bottom: 50px;
+}
+
+.content {
+  margin-top: 50px;
+  max-width: 800px !important;
+  display: block;
+  margin-left: auto;
+  position:relative;
+}
+
+.grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 40px 40px;
+}
+
+.blog-preview {
+  overflow: hidden;
+  height: 600px;
+  padding-bottom: 20px;
+}
+
+.blog-preview a {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.blog-preview .content {
+    overflow: hidden;
+    border: 1px solid;
+    height:520px;
+    padding-top: 25px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.blog-preview .content::before {
+    content:'';
+    height: 520px;
+    width: 100%;
+    border-bottom: 1px solid;
+    position:absolute;
+    left:inherit;
+    top:inherit;
+    background:linear-gradient(transparent 425px, white 495px);
+    margin-left: -1px;
+    pointer-events: all;
+    display: block;
+
+  }
+
+  h1 {
+    padding: 0 10% 20px 10%;
+    margin: 0;
+    text-align: left;
+    text-transform: capitalize;
+
+  }
+
+  .blog {
+    padding: 5px 10% 0 10%;
+    text-align: left;
+  }
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 11; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+#closebtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+}
+
+#openbtn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
